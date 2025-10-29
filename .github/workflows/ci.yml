@@ -30,6 +30,9 @@ jobs:
       - name: Activate pnpm via corepack
         run: corepack prepare pnpm@9 --activate
 
+      - name: Add pnpm to PATH
+        run: echo "$(corepack which pnpm | xargs dirname)" >> $GITHUB_PATH
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
