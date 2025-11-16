@@ -11,7 +11,8 @@ updates:
     open-pull-requests-limit: 10
     labels:
       - "dependencies"
-      - "automated"
+    assignees:
+      - "dytsou"
     commit-message:
       prefix: "chore"
       prefix-development: "chore"
