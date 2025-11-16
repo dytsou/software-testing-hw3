@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main, master ]
 
+permissions:
+  pull-requests: write
+  actions: write
+  contents: write
 jobs:
   test:
     name: Test (Node ${{ matrix.node-version }})
