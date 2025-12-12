@@ -24,5 +24,10 @@
     "testEnvironment": "node",
     "transform": {},
     "coveragePathIgnorePatterns": []
+  },
+  "pnpm": {
+    "overrides": {
+      "glob": ">=10.5.0"
+    }
   }
 }
