@@ -17,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^30.5.1",
+    "jest": "^30.5.2",
     "js-yaml": ">=5.4.2"
   },
   "jest": {
