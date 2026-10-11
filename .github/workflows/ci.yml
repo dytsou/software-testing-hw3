@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [26.x]
 
     steps:
       - name: Checkout
@@ -27,15 +27,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-
       - name: Enable corepack
         run: corepack enable
 
       - name: Activate pnpm via corepack
-        run: corepack prepare pnpm@9 --activate
+        run: corepack prepare pnpm@11 --activate
 
       - name: Add pnpm to PATH
-        run: echo "$(corepack which pnpm | xargs dirname)" >> $GITHUB_PATH
+        run: echo "$(dirname -- "$(corepack which pnpm)")" >> $GITHUB_PATH
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -53,4 +52,3 @@ jobs:
           path: |
             coverage/
           if-no-files-found: ignore
-

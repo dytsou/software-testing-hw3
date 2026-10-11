@@ -25,10 +25,8 @@
     "transform": {},
     "coveragePathIgnorePatterns": []
   },
-  "pnpm": {
-    "overrides": {
-      "glob": ">=10.5.0",
-      "test-exclude": ">=7.0.0"
-    }
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=26"
   }
 }
